@@ -1,0 +1,38 @@
+GET {{url}} /trips
+Accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+###
+GET {{url}}/trips/3
+Authorization: Bearer {{jwt_token}}
+
+###
+POST {{url}}/trips
+Authorization: Bearer {{jwt_token}}
+
+
+{
+    "startTime": "2024-12-01T09:00:00",
+    "endTime": "2024-12-01T17:00:00",
+    "startposition": "Mount Everest Base",
+    "name": "Mountain Expedition",
+    "price": 1200.0,
+    "category": "snow",
+    "guideId": 3
+}
+###
+DELETE {{url}}/trips/1
+Authorization: Bearer {{jwt_token}}
+
+###
+PUT{{url}}/trips/5/guides/3
+Authorization: Bearer {{jwt_token}}
+
+###
+GET {{url}}/trips/category/snow
+Authorization: Bearer {{jwt_token}}
+
+
+###
+GET {{url}}/trips/overview/overview
+Authorization: Bearer {{jwt_token}}
